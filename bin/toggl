@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Console\Application;
+
+if (!is_file(__DIR__.'/../vendor/autoload.php')) {
+    echo "Autoload not found.\n";
+    exit(1);
+}
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+$application = new Application();
+$application->run();
