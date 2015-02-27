@@ -6,7 +6,22 @@
         "ajt/guzzle-toggl": "0.9",
         "nickcernis/html-to-markdown": "~2.1",
         "symfony/config": "~2.5",
-        "symfony/yaml": "~2.5"
+        "symfony/yaml": "~2.5",
+        "incenteev/composer-parameter-handler": "~2.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml",
+            "parameter-key": "toggl"
+        }
     },
     "authors": [
         {

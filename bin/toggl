@@ -2,6 +2,8 @@
 <?php
 
 use Symfony\Component\Console\Application;
+use MOG\Toggl\Command\ProjectCommand;
+use MOG\Toggl\Command\WorkspaceCommand;
 
 if (!is_file(__DIR__.'/../vendor/autoload.php')) {
     echo "Autoload not found.\n";
@@ -11,4 +13,6 @@ if (!is_file(__DIR__.'/../vendor/autoload.php')) {
 require_once __DIR__.'/../vendor/autoload.php';
 
 $application = new Application();
+$application->add(new ProjectCommand());
+$application->add(new WorkspaceCommand());
 $application->run();
