@@ -3,6 +3,7 @@
 
 use Symfony\Component\Console\Application;
 use MOG\Toggl\Command\ProjectListCommand;
+use MOG\Toggl\Command\TimeEntryListCommand;
 use MOG\Toggl\Command\WorkspaceListCommand;
 
 if (!is_file(__DIR__.'/../vendor/autoload.php')) {
@@ -15,4 +16,5 @@ require_once __DIR__.'/../vendor/autoload.php';
 $application = new Application();
 $application->add(new ProjectListCommand());
 $application->add(new WorkspaceListCommand());
+$application->add(new TimeEntryListCommand());
 $application->run();
