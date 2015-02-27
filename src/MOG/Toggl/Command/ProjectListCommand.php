@@ -71,6 +71,10 @@ class ProjectListCommand extends TogglCommand
             )
         );
 
+        uasort($projects, function($a, $b) {
+            return $a['id'] < $b['id'];
+        });
+
         return $projects;
     }
 
