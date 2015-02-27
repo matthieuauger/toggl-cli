@@ -65,11 +65,7 @@ class ProjectListCommand extends TogglCommand
 
     private function getProjects($workspaceId)
     {
-        $projects = $this->client->getWorkspaceProjects(
-            array(
-                'id' => $workspaceId,
-            )
-        );
+        $projects = $this->client->getWorkspaceProjects($workspaceId);
 
         uasort($projects, function($a, $b) {
             return $a['id'] < $b['id'];

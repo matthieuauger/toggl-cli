@@ -2,7 +2,7 @@
 
 namespace MOG\Toggl\Command;
 
-use AJT\Toggl\TogglClient;
+use MOG\TogglClient\TogglClient;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -17,6 +17,6 @@ abstract class AbstractTogglCommand extends Command
     protected function initialize(InputInterface $input, OutputInterface $output)
     {
         $this->config = Yaml::parse(__DIR__ . '/../../../../app/config/parameters.yml')['toggl'];
-        $this->client = TogglClient::factory(array('api_key' => $this->config['api_key']));
+        $this->client = new TogglClient($this->config['api_key']);
     }
 }

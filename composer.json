@@ -3,12 +3,18 @@
     "description": "Toggl API client console",
     "require": {
         "symfony/console": "~2.5",
-        "ajt/guzzle-toggl": "0.9",
+        "mog/toggl-php-client": "dev-master",
         "nickcernis/html-to-markdown": "~2.1",
         "symfony/config": "~2.5",
         "symfony/yaml": "~2.5",
         "incenteev/composer-parameter-handler": "~2.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:matthieuauger/toggl-php-client.git"
+        }
+    ],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
