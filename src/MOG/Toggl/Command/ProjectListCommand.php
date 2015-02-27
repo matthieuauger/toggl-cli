@@ -10,14 +10,14 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Helper\TableHelper;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class ProjectCommand extends TogglCommand
+class ProjectListCommand extends TogglCommand
 {
     private $workspace;
 
     protected function configure()
     {
         $this
-            ->setName('project')
+            ->setName('project:list')
             ->setDescription('List available projects')
             ->addArgument(
                 'workspace',

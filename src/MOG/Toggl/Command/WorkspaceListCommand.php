@@ -8,12 +8,12 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Helper\TableHelper;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class WorkspaceCommand extends TogglCommand
+class WorkspaceListCommand extends TogglCommand
 {
     protected function configure()
     {
         $this
-            ->setName('workspace')
+            ->setName('workspace:list')
             ->setDescription('List available workspaces')
         ;
     }
