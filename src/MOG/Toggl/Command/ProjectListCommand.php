@@ -86,7 +86,6 @@ class ProjectListCommand extends TogglCommand
     private function displayProjects(OutputInterface $output, $projects, $filter)
     {
         $table = $this->getHelperSet()->get('table');
-        $table->setLayout(TableHelper::LAYOUT_COMPACT);
 
         $content = array();
         foreach ($projects as $project) {

@@ -24,7 +24,6 @@ class WorkspaceListCommand extends TogglCommand
         $output->writeln('');
 
         $table = $this->getHelperSet()->get('table');
-        $table->setLayout(TableHelper::LAYOUT_COMPACT);
 
         $workspaces = $this->client->getWorkspaces();
 

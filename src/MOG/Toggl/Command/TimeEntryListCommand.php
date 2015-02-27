@@ -47,7 +47,6 @@ class TimeEntryListCommand extends TogglCommand
     private function displayTimeEntries(OutputInterface $output, $timeEntries)
     {
         $table = $this->getHelperSet()->get('table');
-        $table->setLayout(TableHelper::LAYOUT_DEFAULT);
 
         $content = array();
         foreach ($timeEntries as $timeEntry) {
