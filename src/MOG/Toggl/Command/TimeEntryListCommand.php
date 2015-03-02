@@ -36,8 +36,8 @@ class TimeEntryListCommand extends TogglCommand
 
         $timeEntries = $this->client->getTimeEntries(
             array(
-                'start_date' => $startDate->format('c'),
-                'end_date' => $endDate->format('c'),
+                'start_date' => $startDate,
+                'end_date' => $endDate,
             )
         );
 
@@ -59,9 +59,9 @@ class TimeEntryListCommand extends TogglCommand
             $content[] = array(
                 $timeEntry['description'],
                 $startDate->format('Y-m-d'),
-                $startDate->format('h:i:s'),
+                $startDate->format('H:i:s'),
                 $stopDate->format('Y-m-d'),
-                $stopDate->format('h:i:s'),
+                $stopDate->format('H:i:s'),
                 $timeEntry['pid'],
             );
         }
