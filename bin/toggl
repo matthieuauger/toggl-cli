@@ -2,6 +2,7 @@
 <?php
 
 use Symfony\Component\Console\Application;
+use MOG\Toggl\Command\ClientGetCommand;
 use MOG\Toggl\Command\ClientListCommand;
 use MOG\Toggl\Command\ClientPostCommand;
 use MOG\Toggl\Command\ProjectListCommand;
@@ -17,6 +18,7 @@ if (!is_file(__DIR__.'/../vendor/autoload.php')) {
 require_once __DIR__.'/../vendor/autoload.php';
 
 $application = new Application();
+$application->add(new ClientGetCommand());
 $application->add(new ClientPostCommand());
 $application->add(new ClientListCommand());
 $application->add(new ProjectListCommand());
