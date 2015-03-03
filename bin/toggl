@@ -2,6 +2,7 @@
 <?php
 
 use Symfony\Component\Console\Application;
+use MOG\Toggl\Command\ClientListCommand;
 use MOG\Toggl\Command\ClientPostCommand;
 use MOG\Toggl\Command\ProjectListCommand;
 use MOG\Toggl\Command\TimeEntryPostCommand;
@@ -17,6 +18,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 $application = new Application();
 $application->add(new ClientPostCommand());
+$application->add(new ClientListCommand());
 $application->add(new ProjectListCommand());
 $application->add(new WorkspaceListCommand());
 $application->add(new TimeEntryListCommand());
