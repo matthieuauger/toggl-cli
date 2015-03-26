@@ -67,7 +67,7 @@ class ProjectListCommand extends TogglCommand
     {
         $projects = $this->client->getWorkspaceProjects(
             array(
-                'wid' => $workspaceId,
+                'wid' => (int) $workspaceId,
             )
         );
 
