@@ -223,16 +223,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthieuauger/toggl-php-client.git",
-                "reference": "6149afc26f2edbbd3d9da8e4229c27afcdf8e4b4"
+                "reference": "15a0bf8df2b7a93052bfc8dc02c722025b53a3a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthieuauger/toggl-php-client/zipball/6149afc26f2edbbd3d9da8e4229c27afcdf8e4b4",
-                "reference": "6149afc26f2edbbd3d9da8e4229c27afcdf8e4b4",
+                "url": "https://api.github.com/repos/matthieuauger/toggl-php-client/zipball/15a0bf8df2b7a93052bfc8dc02c722025b53a3a6",
+                "reference": "15a0bf8df2b7a93052bfc8dc02c722025b53a3a6",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "5.2.x"
+                "guzzlehttp/guzzle": "5.2.x",
+                "symfony/options-resolver": "2.6.x"
+            },
+            "require-dev": {
+                "atoum/atoum": "2.0.x"
             },
             "type": "library",
             "autoload": {
@@ -240,6 +244,9 @@
                     "MOG\\TogglClient": "src"
                 }
             },
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Matthieu Auger",
@@ -256,7 +263,7 @@
                 "source": "https://github.com/matthieuauger/toggl-php-client/tree/master",
                 "issues": "https://github.com/matthieuauger/toggl-php-client/issues"
             },
-            "time": "2015-02-27 21:35:05"
+            "time": "2015-03-16 12:28:53"
         },
         {
             "name": "nickcernis/html-to-markdown",
@@ -455,21 +462,24 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.6.4",
+            "version": "v2.6.5",
             "target-dir": "Symfony/Component/Filesystem",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem.git",
-                "reference": "a1f566d1f92e142fa1593f4555d6d89e3044a9b7"
+                "reference": "fdc5f151bc2db066b51870d5bea3773d915ced0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/a1f566d1f92e142fa1593f4555d6d89e3044a9b7",
-                "reference": "a1f566d1f92e142fa1593f4555d6d89e3044a9b7",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/fdc5f151bc2db066b51870d5bea3773d915ced0b",
+                "reference": "fdc5f151bc2db066b51870d5bea3773d915ced0b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "library",
             "extra": {
@@ -498,7 +508,62 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-03 21:13:09"
+            "time": "2015-03-12 10:28:44"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "v2.6.5",
+            "target-dir": "Symfony/Component/OptionsResolver",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/OptionsResolver.git",
+                "reference": "d619503992eea05eb407a6db76e28dc1b7619416"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/OptionsResolver/zipball/d619503992eea05eb407a6db76e28dc1b7619416",
+                "reference": "d619503992eea05eb407a6db76e28dc1b7619416",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony OptionsResolver Component",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "time": "2015-03-13 17:37:22"
         },
         {
             "name": "symfony/yaml",
@@ -555,6 +620,7 @@
         "mog/toggl-php-client": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
 }
