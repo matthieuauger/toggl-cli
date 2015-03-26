@@ -1,3 +1,4 @@
 toggl:
     api_key: ~
     workspace: ~
+    client: ~
