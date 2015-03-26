@@ -22,6 +22,8 @@ class TimeEntryPostCommand extends TogglCommand
         $output->writeln('Creating new time entry...');
         $output->writeln('');
 
+        throw new \RuntimeException('Not implemented yet');
+
         $start = new \DateTime('2015-03-01 09:30:00');
 
         try {
