@@ -22,6 +22,8 @@ class ClientPostCommand extends TogglCommand
         $output->writeln('Creating new client...');
         $output->writeln('');
 
+        throw new \RuntimeException('Not implemented yet');
+
         try {
             $this->client->postClient(
                 array(
